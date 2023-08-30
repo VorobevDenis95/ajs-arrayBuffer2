@@ -14,7 +14,11 @@ export function getBuffer() {
 export class ArrayBufferConverter {
   // eslint-disable-next-line class-methods-use-this
   load(buffer) {
-    const uint16 = new Uint16Array(buffer);
+    return new Uint16Array(buffer);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  toString(uint16) {
     const str = [];
     uint16.forEach((element) => {
       str.push(String.fromCharCode(element));
